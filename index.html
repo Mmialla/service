@@ -17,25 +17,45 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg nav-justified navbar-light bg-light">
-        <div class="container align-items-center">
-            <a class="navbar-brand" href="#" fw-bold >Mmialla Software Solutions</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-sm">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav" aria-controls="mainnav" aria-expanded="False" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" ></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav text-center">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Services</a>
-                    <a class="nav-link" href="#">Testimonials</a>
-                    <a class="nav-link" href="#">Contacts</a>
-                </div>
-            </div>
-        </div>  
-    </nav>
+            <a href="#Home" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" class="navbar-brand">
+                <span class="fw-bold text-secondary mx-lg-5 mx-5">
+                    MMialla S|Ware Solns
+                </span>
+            </a>
 
+            <div class="collapse navbar-collapse justify-content-end" id="mainnav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Home" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  d-md-none" href="#Service" >Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Review">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contacts">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">About</a>
+                    </li>
+                    <li class="nav-item ms-2 d-none d-md-inline">
+                        <!-- <button type="button" class="btn btn-outline-secondary" href = "#Service">Hire now</button> -->
+                        <a class="btn btn-outline-secondary  nav-link" href="#Service">Hire now</a>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- <nav class="navbar">
+
         <div class="container-xxl">
             <a href="#intro" class="navbar-brand ">
                 <span class="fw-bold text-secondary">
@@ -44,8 +64,9 @@
             </a>
         </div>
     </nav> -->
-    <section id="intro" class="bg">
-        <div class="container-lg">
+    <section id="Home" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+        
+        <div class="container-sm">
             <div class="row justify-content-center align-items-center">
             <div class="col-md-5 text-center d-none d-md-block">
                 <img class="img-fluid" src="./assets/profile.png" alt="author">
@@ -60,7 +81,7 @@
                         Dolores magni beatae, animi quas non, illum amet enim expedita quibusdam nemo, consequuntur asperiores vitae. 
                         Culpa totam obcaecati eaque explicabo ea reprehenderit.
                     </p>
-                    <a href="#pricing" class="btn btn-secondary btn-lg" > Buy Now</a>
+                    <a href="#pricing" class="btn btn-secondary btn-lg " > Buy Now</a>
                 </div>
                 
             </div>
@@ -68,8 +89,8 @@
     </section>
 
 
-    <section id="Service" class="bg-light mt-5" > 
-        <div class="container-lg col-md-5">
+    <section id="Service" class="bg-light mt-5" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"> 
+        <div class="container-lg col-sm-5">
             <div class="text-center">
                 <h2>Pricing Plans</h2>
                 <p class="lead text-muted"> Choose A Pricing Plan that Suits You</p>
@@ -94,7 +115,7 @@
                 <div class="card border-primary border-2">
                     <img src="./assets/design.png" class="card-img-top" alt="webite development">
                     <div class="card-body text-center py-4">
-                        <div class="card-header text-center text-primary">Most Popular</div>
+                        <div class="card-header-tabs text-center text-primary py-3">Most Popular</div>
                         <h5 class="card-title">Software Design</h5>
                         <p class="lead card-subtitle">book now</p>
                         <p class="display-5 my-4 text-primary fw-bold">$31.99</p>
@@ -121,7 +142,7 @@
 
     </section>
 
-    <section id="topics">
+    <section id="Review" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
         <div class="container-md">
             <div class="text-center">
                
@@ -200,36 +221,67 @@
     </div>
 </section>
 
- <section id="contact">
+ <section id="Contacts" class="bg-light" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"> 
      <div class="container-lg">
          <div class="text-center">
              <h2>Get In Touch </h2>
              <p class="lead">...questions to ask? Directly reach me </p>
          </div>
-         <div class="row justify-content-center my-5">
-             <div class="col-lg-6">
-                 <form action="">
-                     <label for="email" class="form-label" >Email address</label>
-                     <input type="email" name="Email" id="email" placeholder="e.g. mmialla@yout.com">
+        <form class="row g-3 justify-content-center align-content-center py-2">
+            <div class="col-md-4">
+                <label for="first name" class="form-label">First Name</label>
+                <input type="email" class="form-control" id="inputEmail4">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-4">
+                <label for="first name" class="form-label">Last Name</label>
+                <input type="email" class="form-control" id="inputEmail4">
+                <label for="Phone" class="form-label">Phone number</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
 
-                    <label for="email" class="form-label">First Name </label>
-                    <input type="email" name="Email" id="email" placeholder="e.g. Hassan Rajab">
-                    <label for="claims">What is your question about?</label>
-                    <select name="form-select" id="section">
-                        <option value="services">Service querry</option>
-                        <option value="prices">Cost querry</option>
-                        <option value="information">clarity querry</option>
-                    </select>
-                    <div class="form-floating">
-                        <label for="query" class="form-label"> Your querry... </label>
-                        <textarea name="" id="query" class="form-control " style="height: 140px;"></textarea>
-                        </form>
-                    </div>
-                    
-             </div>
-         </div>
+            <div class="col-8">
+                <label for="exampleFormControlTextarea1" class="form-label"></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="How can we help you?"></textarea>
+            </div>
+            
+            
+            <div class="col-8 text-center d-grid" >
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+
+            <br>
+
+            
+        </form>
+        </div>
      </div>
- </section>
+ </section> 
+
+<section id="profile" class="bg" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-5 text-center d-none d-md-block">
+                <img class="img-fluid rounded-3" src="./assets/profile.jpg" alt="author">
+            </div>
+            <div class="col-md-5 text-center ">
+                <h1>
+                    <div class="display-2 text-md-start">MMialla</div>
+                    <div class="display-5 text-muted text-md-start">Software Engineer</div> 
+                </h1>
+                <p class="lead my-4 text-muted text-md-start">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores magni beatae, animi quas non, illum amet enim expedita quibusdam nemo, consequuntur
+                    asperiores vitae.
+                    Culpa totam obcaecati eaque explicabo ea reprehenderit.
+                </p>
+                <a href="#Service" class="btn btn-secondary btn-lg rounded-3 justify-content-center " > Hire now</a>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
